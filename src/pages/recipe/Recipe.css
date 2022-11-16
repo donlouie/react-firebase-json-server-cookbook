@@ -1,0 +1,46 @@
+.recipe {
+	max-width: 1200px;
+	margin: 40px auto;
+	text-align: center;
+	background: rgb(46, 46, 46);
+	padding: 40px;
+	box-sizing: border-box;
+	color: rgb(194, 194, 194);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.recipe h2 {
+	color: rgb(255, 241, 220);
+}
+.recipe ul {
+	display: flex;
+	padding: 0;
+	justify-content: center;
+	margin-top: 0;
+}
+.recipe li {
+	list-style-type: none;
+	margin-right: 10px;
+	color: rgb(255, 255, 255);
+}
+.recipe li::after {
+	content: ',';
+}
+.recipe li:last-child::after {
+	content: '.';
+}
+.method {
+	text-align: left;
+	line-height: 1.5em;
+}
+.recipe button {
+	color: #555;
+	text-decoration: none;
+	display: block;
+	background: #e2e2e2;
+	font-size: 0.9em;
+	text-align: center;
+	width: 150px;
+	padding: 8px;
+	border-radius: 4px;
+	margin: 20px auto 0;
+}

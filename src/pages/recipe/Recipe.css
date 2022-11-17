@@ -44,3 +44,9 @@
 	border-radius: 4px;
 	margin: 20px auto 0;
 }
+
+/* dark mode */
+.recipe.dark {
+	background: #555;
+	color: #e4e4e4;
+}

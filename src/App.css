@@ -2,7 +2,7 @@
 	min-height: 100%;
 }
 .App.dark {
-	box-shadow: inset 0 0 0 1000px rgba(241, 241, 241, 0.562);
+	box-shadow: inset 0 0 0 1000px rgba(24, 24, 24, 0.897);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;

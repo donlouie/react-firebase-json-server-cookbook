@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+## About The Project
+Simple application to test fetch api w/ json-server on react framework.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 🏗️ Built With
+
+-   React (create-react-app)
+
+### 🔍 Image Preview
+
+![Imgur](https://i.imgur.com/tcmw6AD.png)
 
 ## Available Scripts
 

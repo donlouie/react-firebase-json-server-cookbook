@@ -1,4 +1,5 @@
 ## About The Project
+
 Simple application to test fetch api w/ json-server on react framework.
 
 ### 🏗️ Built With
@@ -7,7 +8,7 @@ Simple application to test fetch api w/ json-server on react framework.
 
 ### 🔍 Image Preview
 
-![Imgur](https://i.imgur.com/tcmw6AD.png)
+![Imgur](https://i.imgur.com/aUdtD6Q.png)
 
 ## Available Scripts
 

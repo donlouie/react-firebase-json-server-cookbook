@@ -2,14 +2,15 @@
 	max-width: 1200px;
 	margin: 40px auto;
 	text-align: center;
-	background: rgb(46, 46, 46);
+	background: #fff;
 	padding: 40px;
 	box-sizing: border-box;
-	color: rgb(194, 194, 194);
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	color: #333;
+	box-shadow: 0 4px 8px 0 rgba(219, 219, 219, 0.2),
+		0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .recipe h2 {
-	color: rgb(255, 241, 220);
+	color: rgb(44, 44, 44);
 }
 .recipe ul {
 	display: flex;
@@ -20,7 +21,7 @@
 .recipe li {
 	list-style-type: none;
 	margin-right: 10px;
-	color: rgb(255, 255, 255);
+	color: rgb(119, 119, 119);
 }
 .recipe li::after {
 	content: ',';
@@ -33,14 +34,35 @@
 	line-height: 1.5em;
 }
 .recipe button {
-	color: #555;
+	color: rgb(231, 231, 231);
 	text-decoration: none;
 	display: block;
-	background: #e2e2e2;
+	background: #1b1b1b;
 	font-size: 0.9em;
 	text-align: center;
 	width: 150px;
 	padding: 8px;
 	border-radius: 4px;
 	margin: 20px auto 0;
+}
+
+/* dark mode */
+.recipe.dark {
+	background: rgb(46, 46, 46);
+
+	color: rgb(194, 194, 194);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.recipe.dark h2 {
+	color: rgb(228, 228, 228);
+}
+
+.recipe.dark li {
+	color: rgb(255, 255, 255);
+}
+
+.recipe.dark button {
+	color: #555;
+
+	background: #e2e2e2;
 }

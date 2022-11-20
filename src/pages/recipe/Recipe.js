@@ -1,25 +1,37 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useFetch } from '../../hooks/useFetch';
 import { useTheme } from '../../hooks/useTheme';
+import { projectFirestore } from '../../firebase/config';
 
 // style
 import './Recipe.css';
 
 function Recipe() {
 	const { id } = useParams();
-	const url = 'http://localhost:3000/recipes/' + id;
-	const { data: recipe, isPending, error } = useFetch(url);
 	const navigate = useNavigate();
 	const { mode } = useTheme();
 
-	const handleDelete = () => {
-		fetch('http://localhost:3000/recipes/' + recipe.id, {
-			method: 'DELETE',
-		}).then(() => {
-			navigate('/');
-		});
-	};
+	const [recipe, setRecipe] = useState(null);
+	const [isPending, setIsPending] = useState(false);
+	const [error, setError] = useState(false);
+
+	useEffect(() => {
+		setIsPending(true);
+
+		projectFirestore
+			.collection('recipes')
+			.doc(id)
+			.get()
+			.then((doc) => {
+				if (doc.exists) {
+					setIsPending(false);
+					setRecipe(doc.data());
+				} else {
+					setIsPending(false);
+					setError('Could not find that recipe');
+				}
+			});
+	}, [id]);
 
 	useEffect(() => {
 		if (error) {
@@ -43,7 +55,6 @@ function Recipe() {
 						))}
 					</ul>
 					<p className="method">{recipe.method}</p>
-					<button onClick={handleDelete}>Delete Recipe</button>
 				</>
 			)}
 		</div>

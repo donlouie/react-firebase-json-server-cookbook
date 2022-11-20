@@ -18,7 +18,6 @@ const ThemeSelector = () => {
 	const toggleMode = () => {
 		changeMode(mode === 'light' ? 'dark' : 'light');
 	};
-	console.log(mode);
 
 	return (
 		<div className="theme-selector">

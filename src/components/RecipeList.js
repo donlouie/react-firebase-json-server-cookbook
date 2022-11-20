@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTheme } from '../hooks/useTheme';
+import Trashcan from '../assets/trashcan.svg';
+import { projectFirestore } from '../firebase/config';
 
 //style
 import './RecipeList.css';
@@ -11,6 +13,10 @@ function RecipeList({ recipes }) {
 		return <div className="error">No recipes to load...</div>;
 	}
 
+	const handleClick = (id) => {
+		projectFirestore.collection('recipes').doc(id).delete();
+	};
+
 	return (
 		<div className="recipe-list">
 			{recipes.map((recipe) => (
@@ -21,6 +27,12 @@ function RecipeList({ recipes }) {
 						<h4>{recipe.method.substring(0, 100)}...</h4>
 					</div>
 					<Link to={`/recipes/${recipe.id}`}>Cook This</Link>
+					<img
+						className={`delete ${mode}`}
+						src={Trashcan}
+						onClick={() => handleClick(recipe.id)}
+						alt=""
+					/>
 				</div>
 			))}
 		</div>

@@ -1,6 +1,6 @@
 ## About The Project
 
-Simple application to test fetch api w/ json-server on react framework.
+Simple application to test fetch api w/ json-server & firebase on react framework.
 
 ### 🏗️ Built With
 

@@ -8,7 +8,6 @@ import './Home.css';
 import RecipeList from '../../components/RecipeList';
 
 function Home() {
-	//* fetch data from json
 	const [data, setData] = useState(null);
 	const [isPending, setIsPending] = useState(false);
 	const [error, setError] = useState(false);

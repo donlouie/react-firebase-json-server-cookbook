@@ -8,6 +8,7 @@ import './Create.css';
 
 function Create() {
 	const [title, setTitle] = useState('');
+	const [description, setDescription] = useState('');
 	const [method, setMethod] = useState('');
 	const [cookingTime, setCookingTime] = useState('');
 	const [newIngredient, setNewIngredient] = useState('');
@@ -20,6 +21,7 @@ function Create() {
 		e.preventDefault();
 		const doc = {
 			title,
+			description,
 			ingredients,
 			method,
 			cookingTime: cookingTime + ' minutes',
@@ -57,6 +59,18 @@ function Create() {
 							setTitle(e.target.value);
 						}}
 						value={title}
+						required
+					/>
+				</label>
+
+				<label>
+					<span>Recipe Description:</span>
+					<textarea
+						type="text"
+						onChange={(e) => {
+							setDescription(e.target.value);
+						}}
+						value={description}
 						required
 					/>
 				</label>

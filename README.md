@@ -8,7 +8,7 @@ Simple application to test fetch api w/ json-server & firebase on react framewor
 
 ### 🔍 Image Preview
 
-![Imgur](https://i.imgur.com/aUdtD6Q.png)
+![Imgur](https://i.imgur.com/QwHEgcm.png)
 
 ## Available Scripts
 

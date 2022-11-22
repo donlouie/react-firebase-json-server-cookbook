@@ -54,6 +54,8 @@ function Recipe() {
 							<li key={ing}>{ing}</li>
 						))}
 					</ul>
+					<h4 className="method">{recipe.description}</h4>
+					<br />
 					<p className="method">{recipe.method}</p>
 				</>
 			)}

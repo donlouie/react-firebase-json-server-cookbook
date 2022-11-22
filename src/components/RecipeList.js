@@ -24,7 +24,7 @@ function RecipeList({ recipes }) {
 					<h3>{recipe.title}</h3>
 					<p>{recipe.cookingTime} to make.</p>
 					<div>
-						<h4>{recipe.method.substring(0, 100)}...</h4>
+						<h4>{recipe.description.substring(0, 100)}...</h4>
 					</div>
 					<Link to={`/recipes/${recipe.id}`}>Cook This</Link>
 					<img
